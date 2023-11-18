@@ -12,8 +12,8 @@ using RazorPageMovie.Data;
 namespace RazorPageMovie.Migrations
 {
     [DbContext(typeof(RazorPageMovieContext1))]
-    [Migration("20231104153540_Rating")]
-    partial class Rating
+    [Migration("20231104192455_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,13 +42,16 @@ namespace RazorPageMovie.Migrations
                         .HasColumnType("decimal(18:2)");
 
                     b.Property<string>("Rating")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("RelaseDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.HasKey("Id");
 

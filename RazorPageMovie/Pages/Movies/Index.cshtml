@@ -13,10 +13,10 @@
 
 <form>
     <p>
-        Genre: <select asp-for="MovieGenre" asp-items="Model.Genres">
+        Genero: <select asp-for="MovieGenre" asp-items="Model.Genres">
             <option value="">All</option>
         </select>
-        Title: <input type="text" asp-for="SearchString"/>
+        Titulo: <input type="text" asp-for="SearchString"/>
         <input type="submit" value="Filter"/>
     </p>
 </form>
@@ -61,12 +61,12 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                @*<a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> |
-                <a href="/Movies/Edit/?id=@item.Id">Edit 2 </a> |
-                <a href="/Movies/Details/?id=@item.Id">Details 2</a> |
-                <a href="/Movies/Delete/?id=@item.Id">Delete 2</a>
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> |*@
+                <a href="/Movies/Edit/?id=@item.Id">Edit</a> |
+                <a href="/Movies/Details/?id=@item.Id">Details</a> |
+                <a href="/Movies/Delete/?id=@item.Id">Delete</a>
 
             </td>
         </tr>

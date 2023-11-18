@@ -36,7 +36,7 @@ namespace RazorPageMovie.Models
                         RelaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
                         Price = 8.99M,
-                        Rating = "G"
+                        Rating = "PG-13"
                     },
                     new Movie
                     {
@@ -44,7 +44,7 @@ namespace RazorPageMovie.Models
                         RelaseDate = DateTime.Parse("1989-2-23"),
                         Genre = "Comedy",
                         Price = 9.99M,
-                        Rating = "G"
+                        Rating = "PG-13"
                     },
                     new Movie
                     {
